@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/a3" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="220dp"
+        android:layout_marginTop="70dp"
+        android:background="#F5FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="@+id/texturert">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/custom_font"
+            android:gravity="center"
+            android:text="Loading . . ."
+            android:textColor="@color/dark_bg_black_text"
+            android:textSize="24sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="left"
+        android:background="#F5FFFFFF"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/aclass"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:adjustViewBounds="false"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/quesbingung"
+                android:tooltipText="Iki nggo ganti !"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textViewClass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/josefinsemibold"
+                android:gravity="center|left"
+                android:text="Image Classification App"
+                android:textColor="@color/dark_bg_black_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/idBackClass"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|right"
+                android:adjustViewBounds="false"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/undo"
+                android:tooltipText="Iki nggo translate !" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ionux.hunterkuy.proses_Kamera.AutoFitCamera
+        android:id="@+id/texturert"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#F5FFFFFF"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/exoregular"
+                android:gravity="center"
+                android:text="Prediksi"
+                android:textColor="@color/dark_bg_black_text"
+                android:textSize="18dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="@color/dark_bg_black_text"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/hslPredikWaktu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/josefinsemibold"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/dark_bg_black_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_bg_black_text"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/exoregular"
+                android:gravity="center"
+                android:text="Top Prediksi"
+                android:textColor="@color/dark_bg_black_text"
+                android:textSize="18dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="@color/dark_bg_black_text"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/hslPredikJawa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/theforgenone"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/dark_bg_black_text"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
